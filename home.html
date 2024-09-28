@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a href="#home">HOME</a> |
+                <a href="#menu">MENU</a> |
+                <a href="#location">LOCATION</a> |
+                <a href="#aboutus">ABOUT US</a> |
+                <a href="#contactus">CONTACT US</a>
+            </nav>
+        </header>
+
+        <section id="home">
+            <img src="banner.jpg" alt="Restaurant Banner">
+        </section>
+
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="grid-container">
+                <div class="menu-item" onclick="showModal('Pizza', 10)">
+                    <img src="menu1.jpg" alt="Pizza">
+                    <p>Pizza</p>
+                </div>
+                <div class="menu-item" onclick="showModal('Mango Lassi', 5)">
+                    <img src="menu2.jpg" alt="Mango Lassi">
+                    <p>Mango Lassi</p>
+                </div>
+                <div class="menu-item" onclick="showModal('Burger', 8)">
+                    <img src="menu3.jpg" alt="Burger">
+                    <p>Burger</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="location">
+            <h2>Location</h2>
+            <p>38 Patli Gali, Mumbai</p>
+            <iframe src="https://www.google.com/maps/embed?..." width="600" height="450"></iframe>
+        </section>
+
+        <section id="contactus">
+            <h2>Contact Us</h2>
+            <p>Call us at +91791234567 or email us at info@atliqfastfood.com</p>
+        </section>
+
+        <div id="cart">
+            <h3>Your Cart</h3>
+            <ul id="cart-items">
+                <!-- Cart items will appear here -->
+            </ul>
+            <p id="cart-total">Total: $0</p>
+        </div>
+
+        <iframe width="350" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/7be38d05-af6a-432a-856b-58b7b263e714"></iframe>
+
+        <!-- Pricing Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeModal()">&times;</span>
+                <h2 id="item-name"></h2>
+                <p>Price: $<span id="item-price"></span></p>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
